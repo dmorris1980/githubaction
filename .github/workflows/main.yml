@@ -17,6 +17,6 @@ jobs:
         PRD_BRANCH: main
         PRD_ENV: staticnomad
         STG_BRANCH: stage
-        STG_ENV: staticnstg
+        STG_ENV: Staticnstg
         DEV_BRANCH: dev
         DEV_ENV: staticndev

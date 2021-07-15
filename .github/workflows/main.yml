@@ -9,7 +9,7 @@ jobs:
     - name: GitHub Action Deploy to WP Engine
       uses: wpengine/github-action-wpe-site-deploy@feature/hackathon
       env:
-        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }} 
+        WPE_SSHG_KEY_PRIVATE: ${{secrets.PRIVATE_KEY_NAME}} 
         PHP_LINT: true
         TPO_SRC_PATH: ""
         TPO_PATH: ""

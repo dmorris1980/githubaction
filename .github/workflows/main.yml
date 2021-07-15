@@ -10,7 +10,7 @@ jobs:
       uses: wpengine/github-action-wpe-site-deploy@feature/hackathon
       env:
         WPE_SSHG_KEY_PRIVATE: ${{secrets.PRIVATE_KEY_NAME}} 
-        PHP_LINT: true
+        PHP_LINT: False
         TPO_SRC_PATH: ""
         TPO_PATH: ""
       # Branches & Environments 

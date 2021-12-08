@@ -1,22 +1,19 @@
 name: Deploy to WP Engine
 on:
   push:
+
 jobs:
   build:
     runs-on: ubuntu-latest  
     steps: 
     - uses: actions/checkout@v2
     - name: GitHub Action Deploy to WP Engine
-      uses: wpengine/github-action-wpe-site-deploy@feature/hackathon
-      env:
-        WPE_SSHG_KEY_PRIVATE: ${{secrets.PRIVATE_KEY_NAME}} 
-        PHP_LINT: true
-        TPO_SRC_PATH: ""
-        TPO_PATH: ""
+      uses: wpengine/github-action-wpe-site-deploy@v2.3.3
+      with:
+      
+      # Deploy vars
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.PRIVATE_KEY_NAME }} 
+      
       # Branches & Environments 
         PRD_BRANCH: main
         PRD_ENV: staticnomad
-        STG_BRANCH: stage
-        STG_ENV: staticnstg
-        DEV_BRANCH: dev
-        DEV_ENV: staticndev
